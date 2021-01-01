@@ -81,7 +81,7 @@ def check_for_opp(e1_data, e1, e2_data, e2):
                 'min_ask_exchange': min_ask_exchange,
                 'profit_ratio': profit_ratio}
     else:
-        log_telegram("Bot Durdu!")
+        log_telegram("Stopped!")
 
 
 def report_balances(binance, btcturk):
@@ -99,9 +99,9 @@ def log_print(string):
     log_file.write(f'{str(string)}\n')
 
 def log_telegram(string):
-    api_id = 1630183
-    api_hash = 'b9d1e2d20d2bf1190d50d952f957bebe'
-    bot_token = '1377830274:AAEEQ5qhdCrqwbP4Bzrd9b6y_QZIzL4rJQM'
+    api_id = 0
+    api_hash = ''
+    bot_token = ''
     bot = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
 
     async def main():
